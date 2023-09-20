@@ -1,0 +1,23 @@
+﻿@model WeatherData
+
+@if (Model != null)
+{
+    <p>Weather for @ViewBag.city / @ViewBag.countryCode</p>
+    <br />
+    <br />
+    foreach (var weather in Model.Weather)
+    {
+        <p>main: @weather.Main</p>
+        <p>decription: @weather.Description</p>
+        <br />
+        <br />
+    }
+    <p>temp: @Model.Main.temp</p>
+    <p>max temp: @Model.Main.temp_max</p>
+    <p>min temp: @Model.Main.temp_min</p>
+    <p>humidity: @Model.Main.humidity</p>
+    <p>feels like: @Model.Main.feels_like</p>
+    <p>sea level: @Model.Main.sea_level</p>
+    <p>ground level: @Model.Main.grnd_level</p>
+    <p>pressure: @Model.Main.pressure</p>
+}

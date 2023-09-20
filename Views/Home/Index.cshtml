@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<p>Vælg by</p>
+<form asp-controller="Home" asp-action="PostCity">
+    <input placeholder="city" name="city" />
+    <input placeholder="country code" name="countryCode"/>
+    <button type="submit">Søg</button>
+</form>
+
