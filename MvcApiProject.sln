@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApiProject", "MvcApiProject.csproj", "{84E31AB5-41BA-40D7-B6F2-B053E30D523F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvc", "Mvc.csproj", "{84E31AB5-41BA-40D7-B6F2-B053E30D523F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BC2A92FE-C033-4A71-97B2-013AA740A931} = {BC2A92FE-C033-4A71-97B2-013AA740A931}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiProject", "..\ApiProject\ApiProject.csproj", "{A981338E-B011-441E-9E5C-CC86EC5CD683}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenWeatherApi", "..\ApiProject\OpenWeatherApi.csproj", "{A981338E-B011-441E-9E5C-CC86EC5CD683}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BC2A92FE-C033-4A71-97B2-013AA740A931} = {BC2A92FE-C033-4A71-97B2-013AA740A931}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedModels", "..\SharedModels\SharedModels.csproj", "{BC2A92FE-C033-4A71-97B2-013AA740A931}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedModels", "..\SharedModels\SharedModels.csproj", "{BC2A92FE-C033-4A71-97B2-013AA740A931}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

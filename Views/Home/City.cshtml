@@ -1,23 +1,31 @@
-﻿@model WeatherData
+﻿@model OpenWeatherData
 
 @if (Model != null)
 {
     <p>Weather for @ViewBag.city / @ViewBag.countryCode</p>
     <br />
     <br />
-    foreach (var weather in Model.Weather)
+    foreach (var weatherData in Model.list)
     {
-        <p>main: @weather.Main</p>
-        <p>decription: @weather.Description</p>
+        <p>time: @weatherData.dt_txt</p>
+        <p>temp: @weatherData.main.temp</p>
+        <p>max temp: @weatherData.main.temp_max</p>
+        <p>min temp: @weatherData.main.temp_min</p>
+        <p>humidity: @weatherData.main.humidity</p>
+        <p>feels like: @weatherData.main.feels_like</p>
+        <p>sea level: @weatherData.main.sea_level</p>
+        <p>ground level: @weatherData.main.grnd_level</p>
+        <p>pressure: @weatherData.main.pressure</p>
         <br />
         <br />
+        @foreach(var weather in weatherData.weather)
+        {
+            <p>@weather.description</p>
+            <p>@weather.main</p>
+            <br />
+            <br />
+        }
+        
     }
-    <p>temp: @Model.Main.temp</p>
-    <p>max temp: @Model.Main.temp_max</p>
-    <p>min temp: @Model.Main.temp_min</p>
-    <p>humidity: @Model.Main.humidity</p>
-    <p>feels like: @Model.Main.feels_like</p>
-    <p>sea level: @Model.Main.sea_level</p>
-    <p>ground level: @Model.Main.grnd_level</p>
-    <p>pressure: @Model.Main.pressure</p>
+
 }

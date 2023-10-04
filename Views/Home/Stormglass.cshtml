@@ -1,0 +1,26 @@
+﻿@model StormglassData
+
+<h1>Stormglass Data</h1>
+
+<h2>Meta Information:</h2>
+<p>Cost: @Model.meta.cost</p>
+<p>Daily Quota: @Model.meta.dailyQuota</p>
+<p>Start: @Model.meta.start</p>
+<p>End: @Model.meta.end</p>
+
+<h2>Hours:</h2>
+<table>
+    <tr>
+        <th>Time</th>
+        <th>Wave Height (SG)</th>
+        <th>Wave Period (SG)</th>
+    </tr>
+    @foreach (var hour in Model.hours)
+    {
+        <tr>
+            <td>@hour.time</td>
+            <td>@hour.waveHeight.sg</td>
+            <td>@hour.wavePeriod.sg</td>
+        </tr>
+    }
+</table>
